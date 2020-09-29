@@ -1,0 +1,12 @@
+ROT13 is  the easiest form of "cryptography" with a Caesar cipher which shifts each letter of the alphabet
+a secret number of times. ROT13 shifts each letter 13 times and our ciphertext is:
+cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}
+
+To decrypt we can use the bash translate function (tr) to translate the string into using the A-Za-z intervals 
+instead. Shifting 13 steps, A becomes N, so the cipher uses the interval N-Z and then A-M (and n-z a-m). So the
+deciphering looks like this:
+echo $"cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}" | tr 'N-ZA-Mn-za-m' 'A-Za-z'
+
+Which returns the translated string, our flag:
+picoCTF{not_too_bad_of_a_problem}
+
