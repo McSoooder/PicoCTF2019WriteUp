@@ -1,0 +1,6 @@
+"What does this bDNhcm5fdGgzX3IwcDM1 mean? I think it has something to do with bases."
+It does look like something base64-encoded. To check we can try to decode it using bash base64 function with 
+the --decode option:
+echo 'bDNhcm5fdGgzX3IwcDM1' | base64 --decode
+which gives us a string which seems alot like a flag:
+picoCTF{l3arn_th3_r0p35}
