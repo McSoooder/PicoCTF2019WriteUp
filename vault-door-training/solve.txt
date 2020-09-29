@@ -1,0 +1,3 @@
+Running a cat of the .java source file reveals a checkPassword function that compares an input string 
+with their password for the vault:
+picoCTF{w4rm1ng_Up_w1tH_jAv4_3b500738c12}
