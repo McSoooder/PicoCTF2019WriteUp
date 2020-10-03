@@ -1,0 +1,6 @@
+Netcat, or "the swiss army knife  of networks", is a UDP/TCP connection tool which is highly customizable
+and can be most basically be used for connecting to hosts on specific ports via a huge range of protocols.
+This challenge is simply to use netcat to connect to the server 2019shell1.picoctf.com at port 49816:
+"nc 2019shell1.picoctf.com 49816"
+When connecting the server responds with the flag:
+picoCTF{nEtCat_Mast3ry_a752a0d3}
