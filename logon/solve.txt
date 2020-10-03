@@ -1,0 +1,9 @@
+Login as logon on: https://2019shell1.picoctf.com/problem/21895
+Looking at the source at the landing page nothing interesting seems to help us so time for experimenting.
+Entering the username "logon" and logging in with an empty password field logs us in but shows us a page
+with the text "No flag for you" :(
+Checking the source again, nothing special. 
+So next up is looking at what is sent, when logging in the request header shows us the cookie that has an
+Admin field with value "False". So by editing that request with that flag set to True instead gives us a
+response with the flag:
+picoCTF{th3_c0nsp1r4cy_l1v3s_3294afa0}
