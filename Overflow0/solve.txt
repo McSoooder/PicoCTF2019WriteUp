@@ -1,0 +1,9 @@
+Looking at the C source code the program will open the flag.txt file and read the flag into a char array.
+The program will then define a signal handler function for segmentation fault signals which prints the flag.
+This is the function we want to run.
+In the main function, the function vuln takes the first program argument and reads into a buffer of size 128
+bytes. Though, before running the strcpy no size check is done for the argument so if the argument is larger
+than the buffer size there will be a segmentation fault. This way we can run the segmentation fault handler
+function that prints the flag. So running the program with an argument of larger size than 128 bytes makes
+the program output the flag:
+picoCTF{3asY_P3a5y4a888b8e}
