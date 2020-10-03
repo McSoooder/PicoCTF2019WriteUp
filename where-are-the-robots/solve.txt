@@ -1,0 +1,6 @@
+Where are the robots refers to the crawler bots of the web for search engines who crawls the web for indexing.
+These bots visit web pages and looks into their "/robots.txt" file for the web sites configuration of which
+directories the indexing bot should ignore. For this site, the robot.txt refers to a page:
+"https://2019shell1.picoctf.com/problem/21868/e0779.html"
+Where the flag can be found:
+picoCTF{ca1cu1at1ng_Mach1n3s_e0779}
