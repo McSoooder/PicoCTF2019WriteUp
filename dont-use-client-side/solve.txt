@@ -1,0 +1,4 @@
+Going to the website (https://2019shell1.picoctf.com/problem/49886) and checking the source with CTRL+u shows
+some nested if-clauses in the javascript that checks the input in the password field against parts of the flag.
+copy-pasting the parts into order gives us:
+picoCTF{no_clients_plz_ee2f24}
