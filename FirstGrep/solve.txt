@@ -1,0 +1,5 @@
+The name is a hint in itself that we should use grep on the file. Grep can be used for searching for strings
+matching regular expressions in files. So running the command:
+"grep file -e '\picoCTF'"
+gives us the flag in the file:
+picoCTF{grep_is_good_to_find_things_4b2451ea}
