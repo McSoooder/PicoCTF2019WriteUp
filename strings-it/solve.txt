@@ -1,0 +1,7 @@
+Strings is a command for getting all the readable strings from a file. Running it gives us a ton of strings
+which doesn't really help. Although if we run strings on the file and saves the output into a file:
+"strings strings => stringar"
+Then we can run grep in the output file for an expression:
+"grep -e '\picoCTF' stringar"
+Which gives us the flag:
+picoCTF{5tRIng5_1T_0690b2a5}
