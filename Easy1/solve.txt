@@ -1,0 +1,5 @@
+Judging from the table we have a Vigenére cipher with the key SOLVECRYPTO and the cipher UFJKXQZQUNB.
+For each letter in the key, find that column and find the corresponding letter in the cipher and read 
+what row it's on to get the plaintexts letter. Reversing the encryption where (key[i],plaintext[i])=cipher[i].
+In the end, it gets us:
+picoCTF{CRYPTOISFUN}
