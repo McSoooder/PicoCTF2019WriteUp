@@ -1,0 +1,8 @@
+Just like how the ROT13 cipher were deciphered we can use the tr command to translate the characters into
+another character interval. Since we don't know the number of rotations done we can brute force it:
+tr 'a-z' 'b-za-b'
+tr 'a-z 'c-za-c'
+until we reach the correct one:
+tr 'a-z 'e-za-e'
+and it gives us what we need for the flag:
+picoCTF{crossingtherubiconvyfzxekt}
