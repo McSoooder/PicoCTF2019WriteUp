@@ -1,0 +1,4 @@
+Looking at the code, it still checks the input string against the password in plaintext by checking each 
+individual character in scrambled order. Descrambling the order gives us the correct password:
+
+d35cr4mbl3_tH3_cH4r4cT3r5_2487f0
