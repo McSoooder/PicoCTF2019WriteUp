@@ -1,0 +1,13 @@
+The challenge name is hinting at the flag is in the image metadata, so we need to extract the metadata.
+
+The quick way:
+	Run strings on the image:
+	"strings pico_img.png"
+	and the flag will be on the second to last row.
+
+The more proper(?) way:
+	Use a more specialized tool like exiftool and simply list the file metadata by running:
+	"exiftool pico_img.png"
+	The flag will be listed as value to the Artist key:
+
+picoCTF{s0_m3ta_3d6ced35}
