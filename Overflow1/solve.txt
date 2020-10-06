@@ -1,0 +1,60 @@
+When run, the progam prompts us for some input, when entering any character it then replies with:
+"Woah, were jumping to 0x8048705"
+Now, 0x8048305 is a memory address, so referring to "jumping" there we can assume the program goes to that
+address and continues to execute code there, a return address. 
+Running the program again with another input gives us the same output with the same address, until we input
+a longer string. To save space we can run python with the command option and pipe to enter input via python code:
+
+"python -c 'print("A"*100)'" | ./vuln
+
+Which gives us another address in the output:
+"Woah, were jumping to 0x41414141"
+Segmentation fault.
+
+This is a good sign for us, because the hex ASCII value of the character A is 41. Meaning that our A's have
+overwritten the address which the program jumps to. Now let's look at the code.
+
+Once again, the program uses the unsafe gets() function and does not validate any buffer sizes so this further
+confirms that there is a buffer overflow vulnerability. In the function vuln() we also see a call to the 
+get_return_address() function in the string formatting of the output. This means that the program actually
+jumps to that address after the vuln() function has finished and continues execution. We also see the function
+flag() which reads the flag from the flag.txt file and prints it. However, this function is not called.
+
+The conclusion is:
+	-The program CAN read the flag and give it to us, but it doesn't.
+	-We can enter any input into the program and manipulate where in memory it will execute code.
+
+Simply put, our mission is to find the input that will overwrite the return address to make the program
+execute the flag() function.
+
+First off we will run the program and change the input to find out when our program starts affecting the return
+address. We know the buffer is 64 bytes, since local variables and return addresses and such are stored on the 
+stack we know we will need 63 A's to fill the buffer to its full capacity with the null byte at the end. On
+top of that we need to account for each functions EBP-register stored on the stack (4 bytes). After a few tries
+I found that with this input:
+
+"python -c 'print "A"*76' | ./vuln"
+
+The null byte overwrites the last byte of the return address. This tells us we also need to make sure we
+format our modified return address in Little Endian. 
+
+The last thing we need to know is what address we want to redirect to. For this I use radare2, which is a
+nifty tool which can be used for many things, including disassembly and debugging. Running radare2 on vuln:
+
+"r2 vuln"
+
+And entering the visual mode:
+
+"vv"
+
+Allows us to see the assembly instructions along with symbols, meaning we can see where each function
+is stored in the memory. Scrolling to the flag() function we can read the address "0x080485e6".
+
+Now, all that's left is to append the hex characters for our target address backwards (because Little
+Endian) to our 76 A's and flag() will be run:
+
+"python -c 'print "A"*76+"\xe6\x85\x04\x08"' | ./vuln"
+
+Aaaaand we get our flag:
+
+picoCTF{n0w_w3r3_ChaNg1ng_r3tURn5b80c9cbf}
