@@ -1,0 +1,14 @@
+After taking a wild guess and once again looking at the metadata of the PNG file, no flag were to be found.
+So I assumed that the flag was hidden using some kind of steganography. Steganography is a practice where you 
+combine files to hide messages, in a way similar to encryption. With images it can be done in multiple ways.
+Different images can for example be color coded (RGB) and combined to show a completely different image.
+
+Messages can also be hidden in the bits of the image. Each pixel in the image are represented with a byte
+(00000000). Changing the byte will change the image content (the colors) of course, but just changing
+the last bit in each byte will not change the image judging from the naked eye. This is called Least 
+Significant Bit Steganography. So each pixel houses one bit of the hidden message, in addition this can be
+combined with a secret key aswell. Anyway, we don't have a secret key but there are a bunch of online tools
+which will hide or check for hidden messages using this method. Uploading our PNG image to such a tool gives
+us a flag:
+ 
+picoCTF{h1d1ng_1n_th3_b1t5}
