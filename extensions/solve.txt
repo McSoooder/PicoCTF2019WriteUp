@@ -1,0 +1,11 @@
+The name is hinting to file extentions. Simply running a
+"cat flag.txt"
+gives us a bunch of nonesense. Perhaps we can find the true file type by running:
+"file flag.txt"
+Which tells us the file contains PNG image data. Let's rename the file with a .png extention:
+"cp flag.txt flag.png"
+And voila
+"xdg-open flag.png"
+
+Flag:
+picoCTF{now_you_know_about_extensions}
