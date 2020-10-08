@@ -1,0 +1,11 @@
+As the name references to client side again we should find something useful in the inspector.
+There is a script tag in the HTML with a long JS string. So I copy this string and paste it into my own
+JavaScript-file and format it into more readable code. You can find the script in this folder.
+
+There are alot of weird references in the script and it's not too obvious what is going on. I open
+a console on the web page to access the local variables so I can print its values. The function named
+_0x4b5b() takes an index argument and returns the value in the defined list at the start.
+The list contains parts of the flag along with different functions, properties and objects known in JS.
+This makes the flag quite easy do figure out:
+
+picoCTF{not_this_again_055670}
