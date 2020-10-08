@@ -1,0 +1,11 @@
+The name is an obvious reference to wireshark so let's try open the PCAP (Packet CAPture?) file with wireshark.
+After opening we see a bunch of captured packets. This is all too much to manually check each package so
+perhaps the hints can give us some more info?
+"What is a stream?"
+
+So reading up on Wireshark on their official site we find this:
+https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html
+instruction on how to watch the content of each stream. So when we start checking different streams we stumble
+upon the flag: 
+
+picoCTF{StaT31355_636f6e6e}
