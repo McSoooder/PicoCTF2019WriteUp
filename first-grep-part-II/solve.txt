@@ -1,0 +1,10 @@
+Going to the challenges directory there are a bunch of directories with supposedly alot of files in each
+directory. What we need is to run grep in a recursive mode so we can search through all directories and
+their files for one expression. Looking at the manual page for grep:
+"man grep
+we can find the -r flag which enables the recursive option, great!
+
+Running grep:
+"grep -r picoCTF"
+find us the flag in files3/file5:
+picoCTF{grep_r_to_find_this_ee829ae6}
