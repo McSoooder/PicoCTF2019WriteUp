@@ -1,0 +1,7 @@
+When we connect to the challenge using netcat we are prompted with a few binary numbers and we are asked
+for the word which the numbers represent. To avoid slow manual calculation we only have 45 seconds to give
+it to them. So I wrote a simple binary-to-ascii converting script that solved it for me. And another one
+for the following octagonal string and for the hex string. I hope the scripts are self-explaining enough.
+
+Flag:
+picoCTF{learning_about_converting_values_4b4e293e}
