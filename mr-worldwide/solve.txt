@@ -1,0 +1,5 @@
+Judging from the format, the flag have been encrypted with coordinates. So copying them and pasting into 
+Google Maps to find out what country they are in was my first guess. Although up until the first underscore
+it didn't make any sense, so I restarted and replaced the coordinates in the flag with the first letter
+of the town it was from and it worked:
+picoCTF{KODIAK_ALASKA}
