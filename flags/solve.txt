@@ -1,0 +1,11 @@
+Looking at the image and recognizing the pattern it's easy to see we are dealing with some kind of substitution
+cipher. The number of flags before the '{' matches 'picoCTF'. So replacing those flags with characters we
+still have some unknown after looking at the hints and see we only have upper case characters:
+PICOCTF{FxxxxxxxxTxFF}
+
+So, guessing the flag I'm trying "PICOCTF{FLAGSANDSTUFF}" but it didn't work. And nothing else seem
+to fit. Looking at the flags they obviously doesn't belong to any country, but perhaps they have a
+meaning? Searching for "Flag cipher" we find a diagram of the International Code of Signals from
+the US Navy (http://www.quadibloc.com/other/images/signal4.gif) where we can simply decipher the flag:
+
+PICOCTF{F1AG5AND5TUFF}
