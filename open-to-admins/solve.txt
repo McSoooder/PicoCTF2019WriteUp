@@ -1,0 +1,10 @@
+This is a story all about how I over-engineered a CTF-challenge called Open-to-admins.
+Now, a perfectly normal person would start off just like me and notice the bold text in the description
+of "admin" and "time" and the hint referencing to cookies. The next logical step would be to set
+a cookie value "admin" to True (as I did) and then a value "time" to 1400 (as I did not) like the 
+description said...
+
+Me on the other hand would start experimenting with DateTime formats, cookie expiry dates and search for
+cookie tutorials on the web before trying to set the value simply to "1400" and getting the flag:
+
+picoCTF{0p3n_t0_adm1n5_2e8d3883}
