@@ -1,0 +1,4 @@
+The flag we get prompted with when connection is obviously in Morse code. So I wrote a handy script
+to translate to and from Morse.
+
+PICOCTF{M0RS3C0D31SFUN1677257287}
